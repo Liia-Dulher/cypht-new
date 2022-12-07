@@ -1,0 +1,58 @@
+{
+    "name": "jason-munro/cypht",
+    "type": "project",
+    "description": "Lightweight Open Source webmail written in PHP and JavaScript",
+    "keywords": ["php", "webmail", "webmail-client", "imap", "smtp", "news-reader", "rss", "atom", "e-mail", "jmap"],
+    "homepage": "https://cypht.org",
+    "license": "LGPL-2.1",
+    "stability": "dev",
+    "support": {
+        "email": "jason@cypht.org",
+        "irc": "irc://irc.freenode.org/hastymail",
+        "issues": "https://github.com/jasonmunro/cypht/issues"
+    },
+    "authors":[
+        {
+            "name": "Jason Munro",
+            "email": "jason@cypht.org",
+            "homepage": "http://jasonmunro.net",
+            "role": "Project author and admin"
+        }
+    ],
+    "require": {
+        "paragonie/random_compat": "^2.0.18",
+        "erusev/parsedown": "^1.8.0-beta-5",
+        "christian-riesen/base32": "^1.3.2",
+        "ezyang/htmlpurifier": "^4.13.0",
+        "henrique-borba/php-sieve-manager": "dev-master",
+        "bacon/bacon-qr-code": "^1.0.3 || ^2.0.0",
+        "php": ">=5.4",
+        "ext-mbstring": "*",
+        "ext-json": "*",
+        "ext-curl": "*",
+        "ext-openssl": "*",
+        "ext-session": "*",
+        "ext-fileinfo": "*",
+        "webklex/composer-info": "^0.0.1",
+        "composer" : "^2.0.0"
+    },
+    "suggest": {
+        "ext-PDO": "To use database features, this needs to be installed",
+        "ext-redis": "To use Redis for caching, this needs to be installed",
+        "ext-gd": "To use 2fa, this needs to be installed for the QR code display",
+        "ext-memcached": "To use Memcached for caching, this needs to be installed",
+        "ext-gnupg": "To use the PGP module set, this needs to be installed",
+        "ext-imagick":"To use 2fa, this needs to be installed for the QR code display"
+    },
+    "config": {
+    	"optimize-autoloader": true,
+        "allow-plugins": {
+            "endroid/installer": false
+        }
+    },
+    "scripts": {
+        "post-update-cmd": "composer suggest",
+        "post-package-install":"composer suggest",
+        "post-install-cmd": "composer suggest"
+    }
+}

@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" colors="true" xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/9.3/phpunit.xsd">
+  <coverage includeUncoveredFiles="false" processUncoveredFiles="false">
+    <include>
+      <directory suffix=".php">../../lib</directory>
+      <directory suffix=".php">../../modules/core/</directory>
+    </include>
+    <exclude>
+      <file>../../lib/framework.php</file>
+      <file>../../lib/sodium_compat.php</file>
+    </exclude>
+  </coverage>
+  <testsuites>
+    <testsuite name="session">
+      <file>./session.php</file>
+    </testsuite>
+    <testsuite name="cache">
+      <file>./cache.php</file>
+    </testsuite>
+    <testsuite name="crypt">
+      <file>./crypt.php</file>
+    </testsuite>
+    <testsuite name="config">
+      <file>./config.php</file>
+    </testsuite>
+    <testsuite name="db">
+      <file>./db.php</file>
+    </testsuite>
+    <testsuite name="format">
+      <file>./format.php</file>
+    </testsuite>
+    <testsuite name="auth">
+      <file>./auth.php</file>
+    </testsuite>
+    <testsuite name="oauth2">
+      <file>./oauth2.php</file>
+    </testsuite>
+    <testsuite name="module">
+      <file>./module.php</file>
+    </testsuite>
+    <testsuite name="modules">
+      <file>./modules.php</file>
+    </testsuite>
+    <testsuite name="dispatch">
+      <file>./dispatch.php</file>
+    </testsuite>
+    <testsuite name="output">
+      <file>./output.php</file>
+    </testsuite>
+    <testsuite name="request">
+      <file>./request.php</file>
+    </testsuite>
+    <testsuite name="servers">
+      <file>./servers.php</file>
+    </testsuite>
+    <testsuite name="webdav_formats">
+      <file>./webdav_formats.php</file>
+    </testsuite>
+    <testsuite name="api">
+      <file>./api.php</file>
+    </testsuite>
+    <!--<testsuite name="modules_imap">
+            <file>./modules/imap/hm-imap.php</file>
+        </testsuite>-->
+    <testsuite name="modules_core">
+      <file>./modules/core/functions.php</file>
+      <file>./modules/core/message_functions.php</file>
+      <file>./modules/core/message_list_functions.php</file>
+      <file>./modules/core/modules.php</file>
+    </testsuite>
+  </testsuites>
+</phpunit>
